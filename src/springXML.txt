@@ -1,0 +1,6 @@
+USE BEANS STARTER DEFINITION FROM ONLINE
+
+<bean id="alien" class="com.amey.Alien"></bean> - For bean configurations and managing for spring
+id - getBean("alien") based search
+class - com.amey.Alien
+

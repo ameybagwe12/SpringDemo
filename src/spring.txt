@@ -1,0 +1,30 @@
+USE BEANS STARTER DEFINITION FROM ONLINE
+
+ONLY ALIEN OBJECT AND CON WILL GET CALLED FOR ALIEN BEAN
+<bean id="alien" scope="singleton/prototype" class="com.amey.Alien"></bean> - For bean configurations and managing for spring
+id - getBean("alien") based search (Not necessary)
+class - com.amey.Alien
+
+SINGLETON SCOPE - FOR MULTIPLE OBJECT CALL WILL ONLY BE ONCE FOR CLASS REFERENCE
+PROTOTYPE SCOPE - NEW OBJECT FOR THE SAME BEAN AND DIFFERENT REFERENCE
+
+<bean>
+	<property name="age" value="21"></property> -> FOR PRIMITIVE VARIABLE/OBJECT
+	TO SET VALUE TO AGE VARIABLE OF THAT BEAN CLASS (USING SETTER METHOD AND GETTER)
+
+	<property name="laptop" ref="laptop1"></property> -> FOR REFERENCE VARIABLE/OBJECT OF OTHER CLASS
+FOR laptop ID BEAN
+<bean />
+<bean id="laptop1"  class="com.amey.Laptop"></bean>
+
+CONSTRUCTOR INJECTION
+->SHOULD BE IN SEQUENCE BASED ON CONSTRUCTOR SEQUENCE ELSE MENTION TYPE OR INDEX OR NAME
+<constructor-arg index="2" type="com.amey.Laptop" name="lap" ref="lap1"/>
+<constructor-arg type="int" index="0" name="age" value="21"/>
+<constructor-arg type="int" index="1" name="salary" value="5000"/>
+
+INDEX - Index number of argument
+NAME - Name of argument
+VALUE - Value of argument
+REF - Reference bean id name
+TYPE - Type of argument
