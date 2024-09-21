@@ -1,0 +1,42 @@
+<!--&lt;!&ndash;Beans definition&ndash;&gt;-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xsi:schemaLocation="-->
+<!--        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">-->
+
+<!--    &lt;!&ndash;Objects managed by spring framework&ndash;&gt;-->
+<!--    &lt;!&ndash;2 times implementing&ndash;&gt;-->
+<!--    &lt;!&ndash;Or else scope=prototype for multiple new object reference &ndash;&gt;-->
+<!--    &lt;!&ndash;Singleton for same reference (by default)&ndash;&gt;-->
+<!--    &lt;!&ndash;Autowire via name /id for comp interface bean below (byName or byType)&ndash;&gt;-->
+<!--    <bean id="alien" class="com.amey.Alien" scope="singleton" autowire="byType">-->
+
+<!--        &lt;!&ndash;Constructor injection&ndash;&gt;-->
+<!--        &lt;!&ndash;SHOULD BE IN SEQUENCE BASED ON CONSTRUCTOR SEQUENCE ELSE MENTION TYPE OR INDEX OR NAME&ndash;&gt;-->
+<!--        &lt;!&ndash;<constructor-arg index="2" type="com.amey.Laptop" name="lap" ref="lap1"/>&ndash;&gt;-->
+<!--        &lt;!&ndash;<constructor-arg type="int" index="0" name="age" value="21"/>&ndash;&gt;-->
+<!--        &lt;!&ndash;<constructor-arg type="int" index="1" name="salary" value="5000"/>&ndash;&gt;-->
+
+<!--        &lt;!&ndash;Setting age property of alien class&ndash;&gt;-->
+<!--        &lt;!&ndash;<property name="age" value="21"></property>&ndash;&gt;-->
+
+<!--        &lt;!&ndash;Adding reference to bean laptop since value cannot be assigned to object&ndash;&gt;-->
+<!--        <property name="computer" ref="computer2" />-->
+<!--        <property name="age" value="21" />-->
+
+<!--        &lt;!&ndash;Inner Bean&ndash;&gt;-->
+<!--        &lt;!&ndash;<property name="computer" ref="computer2" >&ndash;&gt;-->
+<!--        &lt;!&ndash;<bean id="computer1" class="com.amey.Laptop" primary="true">&ndash;&gt;-->
+<!--        &lt;!&ndash;</bean>&ndash;&gt;-->
+<!--        &lt;!&ndash;</property>&ndash;&gt;-->
+<!--    </bean>-->
+<!--    &lt;!&ndash;<bean id="alien2" class="com.amey.Alien">&ndash;&gt;-->
+<!--    &lt;!&ndash;</bean>&ndash;&gt;-->
+<!--    &lt;!&ndash;Only works when explicit not mentioned for primary&ndash;&gt;-->
+<!--    &lt;!&ndash;<bean id="computer1" class="com.amey.Laptop" primary="true">&ndash;&gt;-->
+<!--    &lt;!&ndash;</bean>&ndash;&gt;-->
+<!--    &lt;!&ndash;Lazy init for not calling desktop by default but will be created on use of obj or if property called&ndash;&gt;-->
+<!--    <bean id="computer2" class="com.amey.Desktop" lazy-init="true">-->
+
+<!--    </bean>-->
+<!--</beans>-->
