@@ -1,9 +1,12 @@
 USE BEANS STARTER DEFINITION FROM ONLINE
 
 ONLY ALIEN OBJECT AND CON WILL GET CALLED FOR ALIEN BEAN
-<bean id="alien" scope="singleton/prototype" class="com.amey.Alien"></bean> - For bean configurations and managing for spring
+<bean id="alien" scope="singleton/prototype" class="com.amey.Alien" autowire="byName/byType"></bean> - For bean configurations and managing for spring
 id - getBean("alien") based search (Not necessary)
 class - com.amey.Alien
+autowire - to connect bean and object/var by autowire 
+(BYNAME - var name compare to bean id)
+(BYTYPE - type of var compare to bean) (BUT NOT FOR MULTIPLE BEAN - WORK ONLY WHEN SET AS PRIMARY)
 
 SINGLETON SCOPE - FOR MULTIPLE OBJECT CALL WILL ONLY BE ONCE FOR CLASS REFERENCE
 PROTOTYPE SCOPE - NEW OBJECT FOR THE SAME BEAN AND DIFFERENT REFERENCE
@@ -15,7 +18,9 @@ PROTOTYPE SCOPE - NEW OBJECT FOR THE SAME BEAN AND DIFFERENT REFERENCE
 	<property name="laptop" ref="laptop1"></property> -> FOR REFERENCE VARIABLE/OBJECT OF OTHER CLASS
 FOR laptop ID BEAN
 <bean />
-<bean id="laptop1"  class="com.amey.Laptop"></bean>
+SET PRIMARY FOR FIRST PREFERENCE
+LAZY-INIT - OBJECT WILL BE CREATED ONLY WHEN ON USE ELSE NOT 
+<bean id="laptop1"  class="com.amey.Laptop" primary="true" lazy-init="true"></bean>
 
 CONSTRUCTOR INJECTION
 ->SHOULD BE IN SEQUENCE BASED ON CONSTRUCTOR SEQUENCE ELSE MENTION TYPE OR INDEX OR NAME
